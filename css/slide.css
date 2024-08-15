@@ -19,12 +19,17 @@ a {
 
 .slide:hover {
   will-change: transform;
+  cursor: grab;
+}
+
+.slide:active {
+  cursor: grabbing;
 }
 .slide li {
   flex-shrink: 0;
   width: 80vw;
   max-width: 800px;
-  margin: 0 20px;
+  margin: 0 10px;
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -65,7 +70,11 @@ a {
 
 .arrow-nav button:hover {
   cursor: pointer;
-  background-color: #fb5;
+  background-color: var(--cor-primaria);
+}
+
+.arrow-nav button:active {
+  background-color: rgb(245, 191, 111);
 }
 
 .arrow-nav button.prev {
@@ -118,6 +127,11 @@ a {
   overflow: hidden;
   border-radius: 50%;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.custom-constrols li:hover {
+  cursor: pointer;
+  opacity: 0.87;
 }
 
 .custom-constrols li.active {
